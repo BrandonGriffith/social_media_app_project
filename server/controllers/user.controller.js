@@ -61,7 +61,9 @@ api.register = (req, res) => {
                         firstName: user.firstName
                     }, key);
                     res.cookie("usertoken", userToken, key, {
-                            httpOnly: true
+                            httpOnly: true,
+                            sameSite: 'None', 
+                            secure: true
                         })
                         .json({ msg: "success!", user: user });
                 })
@@ -88,7 +90,7 @@ api.login = async(req, res) => {
     }, key);
     res.cookie("usertoken", userToken, key, {
             httpOnly: true,
-            sameSite: 'none', 
+            sameSite: 'None', 
             secure: true
         })
         .json({ msg: "success!" });

@@ -49,7 +49,9 @@ const Posts = (props) => {
                                 </h3>
                                 <p className="card-text bg-dark text-light"> 
                                     {PostObj.ImgUrl!==""?
-                                        <img src={PostObj.ImgUrl} alt="" className='w-50'></img>
+                                        <img src={PostObj.ImgUrl} alt="" className='w-50'
+                                        crossOrigin="anonymous" referrerPolicy="no-referrer"
+                                        ></img>
                                         :null
                                     }
                                 </p>

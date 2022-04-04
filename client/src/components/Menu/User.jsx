@@ -8,7 +8,8 @@ const User = (props) => {
 
     return (
         <>
-        <img src={loggedInUser.imgUrl} className="profilePic" alt="profile pic"/>
+        <img src={loggedInUser.imgUrl} className="profilePic" alt="profile pic"
+        crossOrigin="anonymous" referrerPolicy="no-referrer"/>
         <h3>{loggedInUser.firstName} {loggedInUser.lastName}</h3>
         <Link to="/edit/profile" className='btn btn-secondary m-1'>
                 Edit Profile
